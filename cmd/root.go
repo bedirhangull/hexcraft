@@ -1,6 +1,5 @@
 /*
 Copyright © 2024 NAME HERE <EMAIL ADDRESS>
-
 */
 package cmd
 
@@ -10,18 +9,20 @@ import (
 	"github.com/spf13/cobra"
 )
 
-
-
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "hexcraft",
-	Short: "A brief description of your application",
-	Long: `A longer description that spans multiple lines and likely contains
-examples and usage of using your application. For example:
+	Short: "A CLI tool for generating hexagonal architecture for microservices in Go",
+	Long: `Hexcraft is a command-line tool that helps you quickly generate the necessary files and structure
+for creating a microservice using the hexagonal architecture pattern in Go.
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+The hexagonal architecture, also known as the ports and adapters architecture, provides a clean and
+maintainable structure for building microservices. It separates the core business logic from the external
+dependencies and infrastructure, making the code more modular and easier to test.
+
+With Hexcraft, you can easily scaffold a new microservice project with the hexagonal architecture layout,
+including the necessary packages, interfaces, and starter code. It saves you time and effort in setting up
+the project structure manually.`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) { },
@@ -47,5 +48,3 @@ func init() {
 	// when this action is called directly.
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
-
-

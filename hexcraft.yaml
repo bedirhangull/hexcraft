@@ -1,0 +1,18 @@
+packageName: "myservice"
+dockerfile: true
+gitignore: true
+envFile: true
+container:
+  db:
+    connection: "postgres"
+    host: "localhost"
+    port: "5432"
+    user: "postgres"
+    name: "mydb"
+    password: "password"
+  server:
+    url: "localhost"
+    port: "8080"
+  jwt:
+    secret: "your-secret-key"
+    expire: 24
